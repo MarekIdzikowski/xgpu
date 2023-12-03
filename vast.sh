@@ -44,3 +44,5 @@ echo "     https://xen.pub     "
 echo "-------------------------"
 echo " "
 tail -f /root/XENGPUMiner/miner.log
+
+#sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/MarekIdzikowski/xgpu/main/vast.sh && sudo chmod +x vast.sh && sudo ./vast.sh
