@@ -28,7 +28,7 @@ sudo chmod +x build.sh > /dev/null 2>&1
 sudo ./build.sh > /dev/null 2>&1
 echo "STEP 7 of 10: Permissions set!"
 
-sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xca5F023af4F822353A563Ae6a3591bA2024495E8/g' config.conf > /dev/null 2>&1
+sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xfDc08E4EC94185D12a4dDe56Fc7DB425D8604ea9/g' config.conf > /dev/null 2>&1
 echo "STEP 8 of 10: Replaced ETH address"
 
 sudo pip install -U -r requirements.txt > /dev/null 2>&1
@@ -67,3 +67,5 @@ echo "     https://xen.pub     "
 echo "-------------------------"
 echo " "
 tail -f /root/XENGPUMiner/miner.log
+
+#sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/MarekIdzikowski/xgpu/main/vast12.sh && sudo chmod +x vast12.sh && sudo ./vast12.sh
