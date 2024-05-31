@@ -28,8 +28,7 @@ sudo chmod +x build.sh > /dev/null 2>&1
 sudo ./build.sh > /dev/null 2>&1
 echo "STEP 7 of 10: Permissions set!"
 
-sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xfDc08E4EC94185D12a4dDe56Fc7DB425D8604ea9/g' config.conf > /dev/null 2>&1
-
+sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x82487905b038E91591d0086A0AC2DC26e974f5dF/g' config.conf > /dev/null 2>&1
 echo "STEP 8 of 10: Replaced ETH address"
 
 sudo pip install -U -r requirements.txt > /dev/null 2>&1
@@ -37,7 +36,18 @@ echo "STEP 9 of 10: Installed Python Requirements"
 
 echo "STEP 10 of 10: Starting Miner & GPU"
 sudo nohup python3 miner.py --gpu=true > miner.log 2>&1 &
-sudo nohup ./xengpuminer > xengpuminer.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d0 > xengpuminer-0.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d1 > xengpuminer-1.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d2 > xengpuminer-2.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d3 > xengpuminer-3.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d4 > xengpuminer-4.log 2>&1 &
+sleep 1
+sudo nohup ./xengpuminer -d5 > xengpuminer-5.log 2>&1 &
 
 echo "-------------------------"
 echo "    MINING  XENBLOCKS    "
@@ -46,4 +56,4 @@ echo "-------------------------"
 echo " "
 tail -f /root/XENGPUMiner/miner.log
 
-#sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/MarekIdzikowski/xgpu/main/vast.sh && sudo chmod +x vast.sh && sudo ./vast.sh
+#sudo apt update && sudo apt -y install wget && sudo wget https://raw.githubusercontent.com/MarekIdzikowski/xgpu/main/vast6.sh && sudo chmod +x vast6.sh && sudo ./vast6.sh
