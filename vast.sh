@@ -28,7 +28,7 @@ sudo chmod +x build.sh > /dev/null 2>&1
 sudo ./build.sh > /dev/null 2>&1
 echo "STEP 7 of 10: Permissions set!"
 
-sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0x82487905b038E91591d0086A0AC2DC26e974f5dF/g' config.conf > /dev/null 2>&1
+sudo sed -i 's/account = 0x24691e54afafe2416a8252097c9ca67557271475/account = 0xfDc08E4EC94185D12a4dDe56Fc7DB425D8604ea9/g' config.conf > /dev/null 2>&1
 
 echo "STEP 8 of 10: Replaced ETH address"
 
